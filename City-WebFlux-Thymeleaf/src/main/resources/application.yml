@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: webflux
+  thymeleaf:
+    prefix: classpath:/templates/
+server:
+  tomcat:
+    max-threads: 3
+    max-connections: 3

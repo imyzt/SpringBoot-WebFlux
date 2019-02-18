@@ -46,3 +46,6 @@ Flux 是响应流 Publisher 具有基础 rx 操作符，可以成功发布 0 到
 ## City-WebFlux-MongoDB
 Spring WebFlux整合MongoDB的实例项目, 通过依赖 `spring-boot-starter-data-mongodb-reactive`, 在
 DAO接口中继承 `ReactiveMongoRepository`, 就可以获得一些已定义的CRUD方法直接使用即可.
+
+## City-WebFlux-Thymeleaf
+WebFlux和Thymeleaf的一个简单应用, 用于展示存入MongoDB数据库中的内容.
