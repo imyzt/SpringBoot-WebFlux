@@ -69,3 +69,17 @@ WebFlux和Thymeleaf的一个简单应用, 用于展示存入MongoDB数据库中�
 - 失效：应用程序先从 Cache 取数据，没有得到，则从数据库中取数据，成功后，放到缓存中。
 - 命中：应用程序从 Cache 中取数据，取到后返回。
 - 更新：先把数据存到数据库中，成功后，再让缓存失效。
+
+
+## WebFlux-WebSocket  
+[Spring Boot WebFlux-08——WebFlux 中 WebSocket 实现通信](https://www.cnblogs.com/limuma/p/9315517.html)  
+
+本篇主要是实践WebFlux中的WebSocket的使用, 其中最坑的就是导包.需要使用的WebSocket的包是: 
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-integration</artifactId>
+</dependency>
+```
+然后核心类就是一个配置类和一个消息处理类, 原博主的内容已经非常优秀了,就不重复累赘了.  
+需要测试WebSocket的工具 WebSocket官网已经有提供了. [http://websocket.org/echo.html](http://websocket.org/echo.html)
