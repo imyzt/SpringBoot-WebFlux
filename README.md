@@ -39,5 +39,10 @@ Flux 是什么？官方描述如下：A Reactive Streams Publisher with rx opera
 Flux 是响应流 Publisher 具有基础 rx 操作符，可以成功发布 0 到 N 个元素或者错误。Flux 其实是 Mono 的一个补充，如图所示：
 ![2](http://ww1.sinaimg.cn/large/005SWfHCgy1g08dn4535nj30hs06bjt7.jpg)
 
-- 总结
+- 总结  
 如果知道 `Publisher ` 为 [0-1] 个, 则选择使用 `Mono`, 集合则使用 `Flux`
+
+
+## City-WebFlux-MongoDB
+Spring WebFlux整合MongoDB的实例项目, 通过依赖 `spring-boot-starter-data-mongodb-reactive`, 在
+DAO接口中继承 `ReactiveMongoRepository`, 就可以获得一些已定义的CRUD方法直接使用即可.

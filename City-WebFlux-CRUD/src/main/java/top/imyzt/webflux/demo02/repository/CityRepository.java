@@ -6,6 +6,7 @@ import top.imyzt.webflux.demo02.domain.City;
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
@@ -32,6 +33,12 @@ public class CityRepository {
     }
 
     public City findCityById(Long id) {
+        System.out.println("进入方法了." + Thread.currentThread().getName());
+        try {
+            TimeUnit.MINUTES.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return repository.get(id);
     }
 
