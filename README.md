@@ -50,9 +50,11 @@ DAO接口中继承 `ReactiveMongoRepository`, 就可以获得一些已定义的C
 
 ## City-WebFlux-Thymeleaf  
 [Spring Boot WebFlux-04——WebFlux 整合 Thymeleaf](https://www.cnblogs.com/limuma/p/9315483.html)  
-[Spring Boot WebFlu-05——WebFlux 中 Thymeleaf 和 MongoDB 实践](https://www.cnblogs.com/limuma/p/9315495.html)
+[Spring Boot WebFlu-05——WebFlux 中 Thymeleaf 和 MongoDB 实践](https://www.cnblogs.com/limuma/p/9315495.html)  
+[Spring Boot WebFlux-09——WebFlux 集成测试及部署](https://www.cnblogs.com/limuma/p/9315521.html)  
 
 WebFlux和Thymeleaf的一个简单应用, 用于展示存入MongoDB数据库中的内容.
+test包下面包含了WebFlux的简单测试.
 
 ## City-WebFlux-Redis
 [Spring Boot WebFlux-06——WebFlux 整合 Redis](https://www.cnblogs.com/limuma/p/9315507.html)  
@@ -83,3 +85,9 @@ WebFlux和Thymeleaf的一个简单应用, 用于展示存入MongoDB数据库中�
 ```
 然后核心类就是一个配置类和一个消息处理类, 原博主的内容已经非常优秀了,就不重复累赘了.  
 需要测试WebSocket的工具 WebSocket官网已经有提供了. [http://websocket.org/echo.html](http://websocket.org/echo.html)
+
+
+## springboot-webflux-book-manager-sys
+[Spring Boot WebFlux-10——WebFlux 实战图书管理系统](https://www.cnblogs.com/limuma/p/9315527.html)    
+
+结合前面的内容,整合的所有内容, 书籍管理系统

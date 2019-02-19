@@ -22,7 +22,9 @@ public class EchoHandler implements WebSocketHandler  {
         // 发送消息。消息为“服务端返回：小明， -> ”开头的。
         return session.send(
                 session.receive()
-                        .map(msg -> session.textMessage("ECHO -> " + msg.getPayloadAsText())));
+                        .map(msg -> session.textMessage("ECHO -> " + msg.getPayloadAsText()))
+                        .doOnNext(System.out::println)
+        );
     }
 
     @Override

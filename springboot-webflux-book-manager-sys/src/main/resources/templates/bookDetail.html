@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" th:src="@{https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js}"></script>
+    <link th:href="@{https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/default.css}" rel="stylesheet"/>
+    <link rel="icon" th:href="@{/images/favicon.ico}" type="image/x-icon"/>
+    <meta charset="UTF-8"/>
+    <title>书籍管理</title>
+</head>
+
+<body>
+<div class="contentDiv">
+
+    <legend>
+        <strong>书籍管理</strong>
+    </legend>
+
+    <form th:action="@{/book/create/{action}(action=${action})}" method="post" class="form-horizontal">
+
+        <div class="form-group">
+            <label for="book_id" class="col-sm-2 control-label">书籍编号:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control" id="book_id" name="id" th:value="${book.id}"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="book_name" class="col-sm-2 control-label">书籍名称:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control" id="book_name" name="bookName" th:value="${book.bookName}"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="book_name" class="col-sm-2 control-label">书籍作者:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control" id="book_author" name="author" th:value="${book.author}"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="book_description" class="col-sm-2 control-label">书籍描述:</label>
+            <div class="col-xs-4">
+                <input class="form-control" id="book_description" rows="3" name="description"
+                       th:value="${book.description}" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="book_bookType" class="col-sm-2 control-label">书籍类型:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control" id="book_bookType" name="bookType" th:value="${book.bookType}"
+                />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="book_bookType" class="col-sm-2 control-label">书籍价格:</label>
+            <div class="col-xs-4">
+                <input type="number" min="10" class="form-control" id="book_price" name="price" th:value="${book.price}"
+                />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input class="btn btn-primary" type="submit" value="提交"/>&nbsp;&nbsp;
+                <input class="btn" type="button" value="返回" onclick="history.back()"/>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
